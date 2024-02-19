@@ -65,7 +65,7 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in API development, deployment and website security..
+        I’m a software engineer specializing in API development, deployment and website security.
         Currently, I’m focused on building a bank at{' '}
         <a href="https://nsave.com/" target="_blank" rel="noreferrer">
           nsave.com
