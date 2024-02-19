@@ -1,6 +1,7 @@
 ---
-date: '2021-06-01'
+date: '1'
 title: 'offtrade.live'
+cover: 'offtrade.png'
 github: ''
 external: 'https://offtrade.live'
 tech:
