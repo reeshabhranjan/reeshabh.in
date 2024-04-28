@@ -11,7 +11,7 @@ echo "Installing gh cli"
 uuid=$(uuidgen)
 echo "Go to https://github.com/settings/tokens/new?scopes=repo,admin:org,workflow&description=gh-cli-init-${uuid} to generate a token and paste it here"
 read -s token
-echo "${token}" | gh auth login -p https -h github.com --with-token
+gh auth login -p https -h github.com --with-token <<< "$token"
 
 echo "Installing Docker"
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
