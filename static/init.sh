@@ -8,10 +8,6 @@ echo "Installing gh cli"
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
-uuid=$(uuidgen)
-echo "Go to https://github.com/settings/tokens/new?scopes=repo,admin:org,workflow&description=gh-cli-init-${uuid} to generate a token and paste it here"
-read -s token
-gh auth login -p https -h github.com --with-token <<< "$token"
 
 echo "Installing Docker"
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
