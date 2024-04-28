@@ -33,6 +33,9 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
+echo "Installing micro"
+sudo apt install -y micro
+
 echo "Installing fish"
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
